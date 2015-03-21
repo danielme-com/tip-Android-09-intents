@@ -3,5 +3,13 @@
 
     <string name="app_name">Intents - danielme.com</string>
     <string name="not_available">Intent not available</string>
-
+    <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="youtube">Youtube</string>
+    <string name="contact">Add contact</string>
+    <string name="events">Add event</string>
+    <string name="gplay">Google Play</string>
+    <string name="music">Play music</string>
+    <string name="email">Send Email</string>
+    <string name="maps">Google Maps</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.danielme.tipsandroid.intents;
 
 import java.util.Date;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.app.SearchManager;
@@ -88,7 +89,14 @@ public class MainActivity extends Activity
 	{
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		intent.setData(Uri.parse("market://details?id=com.danielme.muspyforandroid"));
-		startActivity(intent);
+		try
+		{
+			startActivity(intent);
+		}
+		catch (ActivityNotFoundException e)
+		{
+			Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	public void media(View view)
@@ -104,5 +112,24 @@ public class MainActivity extends Activity
 		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
 		emailIntent.putExtra(Intent.EXTRA_TEXT, "body");
 		startActivity(Intent.createChooser(emailIntent, "Seleccione una aplicación"));
+	}
+	
+	public void maps(View view)
+	{
+		//navigation
+		String uri = String.format(Locale.getDefault(), "http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f",37.424307,-122.095023, 37.422867,-122.0932849);
+		//marker
+		//String uri = String.format("http://maps.google.com/maps?q=%f,%f",37.424307,-122.095023);
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+		intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
+		try
+		{
+			startActivity(intent);
+		}
+		catch (ActivityNotFoundException e)
+		{
+			Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+		}
+
 	}
 }
