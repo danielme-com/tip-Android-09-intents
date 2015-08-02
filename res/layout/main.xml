@@ -3,8 +3,8 @@
     android:id="@+id/scrollView1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true" 
-    android:background="@android:color/darker_gray">
+    android:background="@android:color/darker_gray"
+    android:fillViewport="true" >
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -16,148 +16,81 @@
         android:paddingRight="10dp"
         android:paddingTop="8dp" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:weightSum="9" >
+        <LinearLayout style="@style/row" >
 
             <Button
                 android:id="@+id/button1"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="search"
                 android:text="@string/search" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent" />
+            <View style="@style/separador" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
-                android:background="@drawable/button"
+                style="@style/intent_button"
                 android:onClick="share"
                 android:text="@string/share" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:weightSum="9" >
+        <LinearLayout style="@style/row" >
 
             <Button
                 android:id="@+id/button3"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="youtube"
                 android:text="@string/youtube" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent" />
+            <View style="@style/separador" />
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="contact"
                 android:text="@string/contact" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:weightSum="9" >
+        <LinearLayout style="@style/row" >
 
             <Button
                 android:id="@+id/button5"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="events"
                 android:text="@string/events" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent" />
+            <View style="@style/separador" />
 
             <Button
                 android:id="@+id/button6"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="play"
                 android:text="@string/gplay" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:weightSum="9" >
+        <LinearLayout style="@style/row" >
 
             <Button
                 android:id="@+id/button7"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="media"
                 android:text="@string/music" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent" />
+            <View style="@style/separador" />
 
             <Button
                 android:id="@+id/button8"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="email"
                 android:text="@string/email" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
-            android:weightSum="9" >
+        <LinearLayout style="@style/row" >
 
             <Button
                 android:id="@+id/button9"
-                android:layout_width="0dp"
-                android:layout_height="58dp"
-                android:layout_weight="4"
+                style="@style/intent_button"
                 android:onClick="maps"
-                android:text="@string/maps" />            
-           
+                android:text="@string/maps" />
         </LinearLayout>
     </LinearLayout>
 
